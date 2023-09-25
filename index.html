@@ -171,33 +171,13 @@ html, body{
 			.bottomline-world{position:absolute; top: 90px; left:55.7%;}
 			.bottomline-time{position:absolute; top: 90px; left:85.5%;}
 		</style>
-		<p><span class="topline-mario">MARIO</span>
+		<p><span class="topline-mario">CAITS PRESENT</span>
 			<span class="topline-world">WORLD</span>
 			<span class="topline-time">TIME</span>
-			<span class="bottomline-score">OOOOOO</span>
+			<span class="bottomline-score" id="countdown"></span>
 			<span class="bottomline-coin"><img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif" height="40px"> x OO</span>
 			<span class="bottomline-world">1 - 1</span>
 			<span class="bottomline-time">111</span>
-		</p>
-	</div>
-
-	<div class="scorebar">
-		<style>
-			.topline-mario{position:absolute;}
-			.topline-world{position:absolute; left:55%;}
-			.topline-time{position:absolute; left: 85%;}
-			.bottomline-score{position:absolute; top: 190px;}
-			.bottomline-coin{position:absolute; top: 180px; left:30%;}
-			.bottomline-world{position:absolute; top: 190px; left:55.7%;}
-			.bottomline-time{position:absolute; top: 190px; left:85.5%;}
-		</style>
-		<p><span class="topline-mario"></span>
-			<span class="topline-world">CAITS PRESENT</span>
-			<span class="topline-time"></span>
-			<span class="bottomline-score">LOADING</span>
-			<span class="bottomline-coin"><img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif" height="40px"> x OO</span>
-			<span class="bottomline-world"></span>
-			<span class="bottomline-time"></span>
 		</p>
 	</div>
 
@@ -221,6 +201,37 @@ html, body{
 	<div class="mario"></div>
 
 </div>
+
+	<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Dec 25, 2023 07:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
 
 </body>
 </html>
