@@ -43,17 +43,20 @@ html, body{
     font-family: 'Press Start 2P', cursive;
     font-size: 1.5em;
     color: white;
-    
-    padding-left: 50px;
-    padding-right: 50px;
     line-height: 0.2;
 }
 
+.scorebar span {
+    padding-left: 50px;
+    padding-right: 50px;
+}
 
 .scorebar .topline-loading, .scorebar .bottomline-countdown {
     font-size: 1.7em;
     line-height: 1.5em;
     text-align: center;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .scorebar .bottomline-countdown {
     padding-top: 2.5em;
@@ -165,6 +168,11 @@ html, body{
     font-size: 1.2em;
   }
 
+  .scorebar span {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
   .scorebar .topline-loading, .scorebar .bottomline-countdown {
       font-size: 1.5em;
   }
@@ -175,6 +183,9 @@ html, body{
 
   .scorebar .topline-time, .scorebar .bottomline-time {
       display: none;
+      width: fit-content;
+      padding-left: 5px;
+      padding-right: 5px;
   }
 }
 </style>
