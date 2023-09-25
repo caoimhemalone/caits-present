@@ -40,14 +40,25 @@ html, body{
     height: 120px;
     width:100%;    
     
-        font-family: 'Press Start 2P', cursive;
-        font-size: 180%;
-        color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    color: white;
     
     padding-left: 50px;
     padding-right: 50px;
     line-height: 0.2;
 }
+
+
+.scorebar .topline-loading, .scorebar .bottomline-countdown {
+    font-size: 1.7em;
+    line-height: 1.5em;
+    text-align: center;
+}
+.scorebar .bottomline-countdown {
+    padding-top: 2.5em;
+}
+
 .cloud{
     position: absolute;
     height: 100px;
@@ -91,8 +102,6 @@ html, body{
         } 
 
     
-
-
 .bush{
     position: absolute;
     top:-70px;
@@ -151,6 +160,22 @@ html, body{
     width: 100%;
     height: auto;
   }
+
+  .scorebar{ 
+    font-size: 1.2em;
+  }
+
+  .scorebar .topline-loading, .scorebar .bottomline-countdown {
+      font-size: 1.5em;
+  }
+
+  .scorebar .bottomline-coin {
+      top: 95%;
+  }
+
+  .scorebar .topline-time, .scorebar .bottomline-time {
+      display: none;
+  }
 }
 </style>
 </head>
@@ -166,19 +191,23 @@ html, body{
 			.topline-mario{position:absolute;}
 			.topline-world{position:absolute; left:55%;}
 			.topline-time{position:absolute; left: 85%;}
+            .topline-loading{position: absolute; top:190px;}
 			.bottomline-score{position:absolute; top: 90px;}
 			.bottomline-coin{position:absolute; top: 80px; left:30%;}
 			.bottomline-world{position:absolute; top: 90px; left:55.7%;}
 			.bottomline-time{position:absolute; top: 90px; left:85.5%;}
+            .bottomline-countdown{position:absolute; top: 280px;}
 		</style>
-		<p><span class="topline-mario">CAITS PRESENT LOADING:</span>
-			<span class="topline-world"></span>
-			<span class="topline-time"></span>
+		<p><span class="topline-mario">MARIO</span>
+			<span class="topline-world">WORLD</span>
+			<span class="topline-time">TIME</span>
 			<span class="bottomline-coin"><img src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/Coin.gif" height="40px"> x OO</span>
-			<span class="bottomline-score" id="countdown"></span>
+			<span class="bottomline-score">00000</span>
 			<span class="bottomline-world">1 - 1</span>
-			<span class="bottomline-time"></span>
-		</p>
+			<span class="bottomline-time">111</span>
+        </p>
+        <p><span class="topline-loading">CAITS PRESENT LOADING:</span></p>
+			<p><span class="bottomline-countdown" id="countdown"></span></p>
 	</div>
 
 	<img class="cloud" src="https://raw.githubusercontent.com/LantareCode/random-this-and-thats/master/CSS/SuperMario-Animation/images/CloudSingle.gif">
